@@ -775,10 +775,19 @@ Home Section End
     transition: all .40s ease;
 }
 
+.clint-section h1{
+    margin: 5px 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: Gilroy_Bold;
+    color: var(--text-color);
+    transition: all .40s ease;
+}
+
 .clint-section h5{
     text-align: center;
     text-transform: lowercase;
-    font-size: 22px;
+    font-size: 28px;
     color: var(--text-color);
     font-family: Gilroy_Bold;
     transition: all .40s ease;
