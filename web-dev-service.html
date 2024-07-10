@@ -1,0 +1,194 @@
+<!-- Create on 20/06/2024 by Obidy Hasan Naim -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Artisan</title>
+
+    <!-- Tab Icon Link -->
+    <link rel="shortcut icon" href="./assets/images/logo/DA logo.svg" type="image/x-icon">
+
+    <!-- Box Icon Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Flat Icon Link -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <!-- Swiper Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/web-service.css">
+
+</head>
+<body>
+    
+
+    <!------------------------------- Header ------------------------------->
+    <header>
+
+        <!-- Navbar Section -->
+        <nav class="glass">
+
+            <div class="menu-container">
+                <div class="menu-icon menu-btn">
+                    <span class="icon"><i class="fi fi-br-menu-burger menu-btn"></i></span>
+                    <span class="menu-text menu-btn">menu</span>
+                </div>
+            </div>
+
+            <a href="#" class="logo nav-logo"><img src="./assets/images/logo/DA logo.svg" alt=""></a>
+
+            <div class="menu">
+
+                <div class="logo-toggle">
+                    <a href="#" class="logo"><img src="./assets/images/logo/DA logo.svg" alt=""></a>
+                    <i class="bx bx-x closeBtn"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" id="home" class="dot-hover">Home</a></li>
+
+                    <!-- Service start -->
+                    <li>
+                        <a class="services-menu prevent-select dot-hover" >Services</a>
+                        <!-- Sub Menu -->
+                        <div class="sub-menu">
+                            <ul class="sub-menu-list">
+                                <li><a class="top-sub" href="#">Logo Design</a></li>
+                                <li><a href="web-dev-service.html">Website Development</a></li>
+                                <li><a href="#">Mobile App Development</a></li>
+                                <li><a class="end-sub" href="#">Brand Identity & Guidelines</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Service end -->
+
+                    <li><a href="#" class="dot-hover">Projects</a></li>
+                    <li><a href="#" class="dot-hover">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="demo-icon"></div>
+
+        </nav>
+        <!-- Navbar Section End -->
+
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+
+        </section>
+
+
+    </header>
+
+
+    <!------------------------------- Main --------------------------------->
+    <main>
+
+    </main>
+
+    <!-------------------------------- Footer ------------------------------->
+    <footer>
+
+        <!-- footer Section -->
+        <section class="footer-section">
+
+            <div class="footer-container">
+
+                <div class="connect-item card-anim hidden">
+                    <h1>Design Artisan</h1>
+                    <h3>Connect With Us</h3>
+        
+                    <div class="icon-div">
+                        <div class="connect-icon"><i class='bx bxl-facebook'></i></div>
+                        <div class="connect-icon"><i class='bx bxl-instagram-alt' ></i></div>
+                        <div class="connect-icon"><i class='bx bxl-linkedin' ></i></div>
+                        <div class="connect-icon"><i class='bx bxl-behance' ></i></div>
+                        <div class="connect-icon"><i class='bx bxl-dribbble' ></i></div>
+                        <div class="connect-icon"><i class='bx bxl-twitter'></i></div>
+                    </div>
+                </div>
+        
+        
+                <div class="menu-item card-anim hidden">
+        
+                    <h3>Menu Links</h3>
+        
+                    <ul class="footer-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+        
+                <div class="menu-item card-anim hidden">
+        
+                    <h3>Useful Links</h3>
+        
+                    <ul class="footer-menu">
+                        <li><a href="#clint">Our clint</a></li>
+                        <li><a href="#what-we-offer">What We Offer</a></li>
+                        <li><a href="#get-in-touch">Get In Touch</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+        
+                
+                <div class="contact-item card-anim hidden">
+                    <h3>Contact</h3>
+        
+                    <div class="contact-item">
+                        <i class="fi fi-rr-marker"></i>
+                        <p>Foylahat, Rampal, Bagerhat</p>
+                    </div>
+        
+                    <div class="contact-item">
+                        <i class="fi fi-rr-envelope"></i>
+                        <p>humaidyhasan@gmail.com</p>
+                    </div>
+        
+                </div>
+
+            </div>
+
+            <p class="copyright hidden">© Design Artisan 2024</p>
+
+        </section>
+
+    </footer>
+
+
+    <!------------------------------- Javascript ----------------------------->
+
+    <script>
+
+        // --------------- Scroll Animation ------------------
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting){
+            entry.target.classList.add('show');
+            }
+            else{
+            entry.target.classList.remove('show');
+            }
+        });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+    </script>
+
+    <!-- Script Link -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
