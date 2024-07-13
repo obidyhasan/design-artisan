@@ -82,14 +82,68 @@
         <!-- Hero Section -->
         <section class="hero-section">
 
-        </section>
+            <div class="hero-container">
 
+                <h1>Professional<span class="web-span">Website <span class="service-auto"></span> Services</span></h1>
+                <p>Building innovative and customized web solutions to elevate your online presence.</p>
+
+                <button>Start your project</button>
+
+            </div>
+
+        </section>
 
     </header>
 
 
     <!------------------------------- Main --------------------------------->
     <main>
+
+        <!-- Types of Service -->
+        <section class="web-service-section section-padding">
+
+            <div class="web-service-content">
+
+                <h1>Web Design & Development Service</h1>
+                <p>Our expert team delivers high-quality, scalable, and user-friendly websites tailored to meet your business needs.</p>
+
+            </div>
+
+            <div class="web-service-container">
+
+                <div class="web-service-item">
+                    <div class="service-icon"><i class="fi fi-rr-computer"></i></div>
+                    <h2>Custom Website Development</h2>
+                    <p>We specialize in creating bespoke websites that are tailored to your unique business requirements. Our custom websites are designed from the ground up to reflect your brand identity, ensuring a seamless and engaging user experience.</p>
+                </div>
+                <div class="web-service-item">
+                    <div class="service-icon"><i class="fi fi-rr-marketplace-alt"></i></div>
+                    <h2>E-commerce Solutions</h2>
+                    <p>Our e-commerce solutions are designed to create an intuitive and secure online shopping experience. We build robust online stores that are easy to manage and capable of handling high volumes of traffic and transactions.</p>
+                </div>
+
+
+                <div class="web-service-item">
+                    <div class="service-icon"><i class="fi fi-rr-user-headset"></i></div>
+                    <h2>Website Maintenance and Support</h2>
+                    <p>Keeping your website up-to-date and running smoothly is crucial for your online presence. We offer comprehensive maintenance and support services to ensure your website remains secure, performs optimally, and stays current with the latest technologies.</p>
+                </div>
+
+                <div class="web-service-item">
+                    <div class="service-icon"><i class="fi fi-rr-laptop-mobile"></i></div>
+                    <h2>Responsive Web Design</h2>
+                    <p>With the increasing use of mobile devices, having a responsive website is essential. We design websites that adapt seamlessly to different screen sizes and resolutions, ensuring a consistent user experience across all devices.</p>
+                </div>
+                <div class="web-service-item">
+                    <div class="service-icon"><i class="fi fi-rr-site-alt"></i></div>
+                    <h2>Web Application Development</h2>
+                    <p>We develop powerful web applications that are tailored to solve your specific business challenges. Whether you need a custom CRM, a project management tool, or a complex data visualization platform, we have the expertise to deliver.</p>
+                </div>
+                
+
+            </div>
+
+        </section>
 
     </main>
 
@@ -167,6 +221,11 @@
 
     <!------------------------------- Javascript ----------------------------->
 
+    <!-- Text Animate link -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Script Link -->
+
     <script>
 
         // --------------- Scroll Animation ------------------
@@ -185,10 +244,58 @@
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
 
+        // var str = ["development", "design", "application"];
+        var typed = new Typed(".service-auto",{
+            strings : ["development " ,  " application" ,  "design"],
+            typeSpeed : 120,
+            backSpeed : 100,
+            loop: true,
+            showCursor: false,
+            loopCount: Infinity,
+        })
+
+
+        // Navbar Section
+        const body = document.querySelector("body");
+        const nav = document.querySelector("nav");
+        const menu = document.querySelector(".menu-btn");
+        const closeBtn = document.querySelector(".closeBtn");
+        const navLinks = document.querySelector(".nav-links");
+
+        let services = document.querySelector(".services-menu");
+        services.addEventListener("click", ()=>{
+        navLinks.classList.toggle("show-services");
+        })
+
+
+        menu.addEventListener("click" , () =>{
+            nav.classList.add("active");
+        })
+
+        body.addEventListener("click", e =>{
+
+            let clickedElm = e.target;
+
+            if(!clickedElm.classList.contains("menu-btn") && !clickedElm.classList.contains("menu") && !clickedElm.classList.contains("services-menu")){
+                nav.classList.remove("active");
+            }
+
+        })
+
+        // On Scroll
+        window.onscroll=()=>{
+        if(window.scrollY>=500){
+            nav.classList.add("change-color");
+        }
+        else{
+            nav.classList.remove("change-color")
+        }
+        }
+
+
     </script>
 
-    <!-- Script Link -->
-    <script src="script.js"></script>
+
     
 </body>
 </html>

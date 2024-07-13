@@ -1,8 +1,171 @@
+/* --- Colors --- */
+:root{
+    --text-color: #404040;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --green-color: #24e900;
+    --white-text-color: #f2f2f2;
+    --card1: #FBCB6C;
+    --card2: #EA8DD6;
+    --card3: #94A0EB;
+    --card4: #BAE9B3;
+    --card1-back: #FCF8EA;
+    --card2-back: #FFEFFC;
+    --card3-back: #F2F5F9;
+    --card4-back: #F3FCF2;
+}
+
+
+.section-padding{
+    padding: 100px 7%;
+}
+
+
 /* 
 ----------------------- Hero Section -------------------
 */
 .hero-section{
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.7), rgb(0, 44, 10)), url("../assets/images/web-develop/world-back.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 7% 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .40s ease;
+}
+
+
+.hero-container h1{
+    font-size: 2rem;
+    font-family: Gilroy_bold;
+    line-height: 1.2;
+    color: var(--white-text-color);
+    transition: all .40s ease;
+}
+
+.hero-container .web-span{
+    display: block;
+    color: var(--white-color);
+    font-size: 4rem;
+}
+
+.hero-container .service-auto{
+    color: var(--green-color);
+}
+
+
+.hero-container p{
+    color: var(--white-text-color);
+    margin: 20px;
+    font-family: Gilroy_Bold;
+    transition: all .40s ease;
+}
+
+.hero-container button{
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: white;
+    border: 2px solid var(--white-color);
+    background-color: transparent;
+    font-family: Gilroy_SemiBold;
+    transition: all .40s ease;
+}
+
+.hero-container button:hover{
+    border-color: var(--green-color);
+    color: var(--green-color);
+    transform: translateY(10px);
+}
+
+/* 
+------------- Web Service Section -------------
+*/
+.web-service-section{
+
+}
+
+.web-service-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    margin: 0 0 50px;
+    transition: all .40s ease;
+}
+
+.web-service-content h1{
+    font-size: 2rem;
+    font-family: Gilroy_Bold;
+    text-align: center;
+    transition: all .40s ease;
+}
+
+.web-service-content p{
+    margin: 10px;
+    font-family: Gilroy_SemiBold;
+    text-align: center;
+    transition: all .40s ease;
+}
+
+.web-service-container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    font-family: Gilroy_SemiBold;
+    transition: all .40s ease;
+}
+
+.web-service-item{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(150, 150, 150, 0.2) 0px 7px 29px 0px;
+    transition: all .40s ease;
+}
+
+.web-service-item:hover{
+    transform: translateX(10px);
+}
+
+.web-service-item .service-icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--green-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .40s ease;
+}
+
+.service-icon i{
+    font-size: 25px;
+    color: var(--text-color);
+    transition: all .40s ease;
+}
+
+.service-icon:hover i{
+    transform: scale(1.2);
+    color: var(--green-color);
+}
+
+
+.web-service-item h2{
+    font-family: Gilroy_Bold;
+    margin: 20px 0 10px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+
+.web-service-item p{
+    color: var(--text-color);
+    text-align: justify;
 }

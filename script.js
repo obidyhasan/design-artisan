@@ -50,6 +50,9 @@ var typed = new Typed(".auto-type",{
 })
 
 
+
+
+
 // 3D Card Animation
 const cardWrapper = document.querySelector(".card-wrapper");
 const cursive = document.querySelector(".cursive");
