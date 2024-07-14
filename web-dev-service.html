@@ -84,10 +84,10 @@
 
             <div class="hero-container">
 
-                <h1>Professional<span class="web-span">Website <span class="service-auto"></span> Services</span></h1>
-                <p>Building innovative and customized web solutions to elevate your online presence.</p>
+                <h1 class="hidden">Professional<span class="web-span">Website <span class="service-auto"></span> Services</span></h1>
+                <p class="hidden">Building innovative and customized web solutions to elevate your online presence.</p>
 
-                <button>Start your project</button>
+                <button class="hidden">Start your project</button>
 
             </div>
 
@@ -104,42 +104,117 @@
 
             <div class="web-service-content">
 
-                <h1>Web Design & Development Service</h1>
-                <p>Our expert team delivers high-quality, scalable, and user-friendly websites tailored to meet your business needs.</p>
+                <h1 class="hidden">Web Design & Development Service</h1>
+                <p class="hidden">Our expert team delivers high-quality, scalable, and user-friendly websites tailored to meet your business needs.</p>
 
             </div>
 
             <div class="web-service-container">
 
-                <div class="web-service-item">
+                <div class="web-service-item card-anim hidden">
                     <div class="service-icon"><i class="fi fi-rr-computer"></i></div>
                     <h2>Custom Website Development</h2>
                     <p>We specialize in creating bespoke websites that are tailored to your unique business requirements. Our custom websites are designed from the ground up to reflect your brand identity, ensuring a seamless and engaging user experience.</p>
                 </div>
-                <div class="web-service-item">
+                <div class="web-service-item card-anim hidden">
                     <div class="service-icon"><i class="fi fi-rr-marketplace-alt"></i></div>
                     <h2>E-commerce Solutions</h2>
                     <p>Our e-commerce solutions are designed to create an intuitive and secure online shopping experience. We build robust online stores that are easy to manage and capable of handling high volumes of traffic and transactions.</p>
                 </div>
 
 
-                <div class="web-service-item">
+                <div class="web-service-item card-anim hidden">
                     <div class="service-icon"><i class="fi fi-rr-user-headset"></i></div>
                     <h2>Website Maintenance and Support</h2>
                     <p>Keeping your website up-to-date and running smoothly is crucial for your online presence. We offer comprehensive maintenance and support services to ensure your website remains secure, performs optimally, and stays current with the latest technologies.</p>
                 </div>
 
-                <div class="web-service-item">
+                <div class="web-service-item card-anim hidden">
                     <div class="service-icon"><i class="fi fi-rr-laptop-mobile"></i></div>
                     <h2>Responsive Web Design</h2>
                     <p>With the increasing use of mobile devices, having a responsive website is essential. We design websites that adapt seamlessly to different screen sizes and resolutions, ensuring a consistent user experience across all devices.</p>
                 </div>
-                <div class="web-service-item">
+                <div class="web-service-item card-anim hidden">
                     <div class="service-icon"><i class="fi fi-rr-site-alt"></i></div>
                     <h2>Web Application Development</h2>
                     <p>We develop powerful web applications that are tailored to solve your specific business challenges. Whether you need a custom CRM, a project management tool, or a complex data visualization platform, we have the expertise to deliver.</p>
                 </div>
                 
+
+            </div>
+
+        </section>
+
+        <!-- Our Process -->
+        <section class="our-process-section section-padding">
+
+            <div class="our-process-content">
+                <h1 class="section-title hidden">Our Process</h1>
+                <p class="section-subtitle hidden">Streamlined Steps for Exceptional Web Development</p>
+            </div>
+
+            <div class="our-process-container">
+
+            
+                <div class="process-container left-container">
+                    <div class="process-icon"></div>
+                    <div class="process-item">
+                        <h2>Consultation</h2>
+                        <p>Understanding your business goals and project requirements is the first step in our process. We schedule an in-depth consultation to discuss your vision, objectives, and any specific functionalities you need for your website.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+
+
+                <div class="process-container right-container">
+                    <div class="process-icon"></div>
+                    <div class="process-item">
+                        <h2>Planning and Strategy</h2>
+                        <p>Based on the initial consultation, we develop a comprehensive project plan and strategy. This includes creating a detailed project roadmap, defining milestones, and setting clear deliverables to ensure the project stays on track.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+
+               
+                <div class="process-container  left-container">
+                    <div class="process-icon"></div>
+                    <div class="process-item">
+                        <h2>Design and Development</h2>
+                        <p>Our design and development phase focuses on creating a visually appealing and functional website. We begin with wireframes and prototypes to visualize the layout and user experience, followed by the actual development using the latest technologies.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+    
+                </div>
+
+                <div class="process-container  right-container">
+                    <div class="process-icon"></div>
+                    <div class="process-item">
+                        <h2>Testing and Quality Assurance</h2>
+                        <p>Before launching, we rigorously test the website to ensure it is bug-free and performs optimally across different devices and browsers. Our quality assurance process includes both automated and manual testing to guarantee a flawless user experience.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+    
+                </div>
+                
+                
+                <div class="process-container  left-container">
+                    <div class="process-icon"></div>
+                    <div class="process-item">
+                        <h2>Launch and Deployment</h2>
+                        <p>Once the website has passed all testing phases, we prepare for launch. This includes finalizing all content, conducting a pre-launch checklist, and deploying the website to the live environment.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+
+                
+                <div class="process-container  right-container">
+                    <div class="process-icon"></div>
+                    <div class="process-item">
+                        <h2>Ongoing Support and Maintenance</h2>
+                        <p>Our commitment to your project doesn’t end at launch. We offer ongoing support and maintenance services to ensure your website remains secure, updated, and performing at its best.</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
 
             </div>
 
@@ -261,6 +336,7 @@
         const menu = document.querySelector(".menu-btn");
         const closeBtn = document.querySelector(".closeBtn");
         const navLinks = document.querySelector(".nav-links");
+        const ourProcessContainer = document.querySelector(".our-process-container");
 
         let services = document.querySelector(".services-menu");
         services.addEventListener("click", ()=>{
@@ -284,12 +360,19 @@
 
         // On Scroll
         window.onscroll=()=>{
-        if(window.scrollY>=500){
-            nav.classList.add("change-color");
-        }
-        else{
-            nav.classList.remove("change-color")
-        }
+            if(window.scrollY>=500){
+                nav.classList.add("change-color");
+            }
+            else{
+                nav.classList.remove("change-color")
+            }
+
+            if(window.scrollY>=1000){
+                ourProcessContainer.classList.add("start-animation");
+            }
+            else{
+                ourProcessContainer.classList.remove("start-animation")
+            }
         }
 
 
