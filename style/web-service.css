@@ -5,19 +5,16 @@
     --black-color: #000000;
     --green-color: #24e900;
     --white-text-color: #f2f2f2;
-    --card1: #FBCB6C;
-    --card2: #EA8DD6;
-    --card3: #94A0EB;
-    --card4: #BAE9B3;
-    --card1-back: #FCF8EA;
-    --card2-back: #FFEFFC;
-    --card3-back: #F2F5F9;
-    --card4-back: #F3FCF2;
+    --bg-color: #222222;
+    --p-color: rgba(255, 255, 255, 50%);
 }
 
+body{
+    background-color: black;
+}
 
 .section-padding{
-    padding: 100px 7%;
+    padding: 100px 20px;
     transition: all .40s ease;
 }
 
@@ -87,6 +84,10 @@
 /* 
 ----------------------------------------------- Web Service Section ------------------------------------------------
 */
+.web-service-section{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 .web-service-content{
     display: flex;
@@ -94,8 +95,10 @@
     justify-content: center;
     align-items: center;
     color: var(--text-color);
-    margin: 0 0 50px;
     transition: all .40s ease;
+
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .web-service-content h1,
@@ -104,18 +107,22 @@
     font-family: Gilroy_Bold;
     text-align: center;
     transition: all .40s ease;
+    color: white;
 }
 
 .web-service-content p,
 .section-subtitle{
-    margin: 10px;
+    margin: 20px;
     font-family: Gilroy_SemiBold;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all .40s ease;
+    color: var(--p-color);
+
 }
 
 .web-service-container{
+    margin-top: 50px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -124,7 +131,7 @@
 }
 
 .web-service-item{
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 10px;
     padding: 20px;
     box-shadow: rgba(150, 150, 150, 0.2) 0px 7px 29px 0px;
@@ -132,7 +139,7 @@
 }
 
 .web-service-item:hover{
-    transform: translateX(10px);
+    transform: translateY(-10px);
 }
 
 .web-service-item .service-icon{
@@ -148,7 +155,7 @@
 
 .service-icon i{
     font-size: 25px;
-    color: var(--text-color);
+    color: var(--green-color);
     transition: all .40s ease;
 }
 
@@ -159,16 +166,17 @@
 
 
 .web-service-item h2{
-    font-family: Gilroy_Bold;
+    font-family: Gilroy_Semibold;
     margin: 20px 0 15px;
     font-size: 1.3rem;
-    color: var(--text-color);
+    color: white;
 }
 
 
 .web-service-item p{
-    color: var(--text-color);
+    color: var(--p-color);
     text-align: justify;
+    font-family: Gilroy_Regular;
 }
 
 
@@ -177,6 +185,8 @@
 -------------------------------------------------- Our Process --------------------------------------------------
 */
 .our-process-section{
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: black;
     color: var(--white-text-color);
 }
@@ -217,30 +227,31 @@
 
 .process-item{
     padding: 20px 30px;
-    background-color: white;
+    background-color: var(--bg-color);
     position: relative;
     border-radius: 6px;
     font-size: 1.2rem;
-    border: 1px solid var(--green-color);
+    /* border: 1px solid var(--green-color); */
     transition: all .40s ease;
 }
 
-.process-item:hover{
+/* .process-item:hover{
     background-color: var(--green-color);
-}
+} */
 
 .process-item h2{
     font-size: 1.4rem;
-    font-family: Gilroy_Bold;
+    font-family: Gilroy_SemiBold;
+    color: white;
 }
 
 .process-item p{
     text-align: justify;
     line-height: 1.6;
     margin-top: 18px;
-    color: var(--text-color);
+    color: var(--p-color);
     font-size: 1rem;
-    font-family: Gilroy_SemiBold;
+    font-family: Gilroy_Regular;
 }
 
 .left-container{
@@ -252,29 +263,30 @@
 }
 
 .process-container .process-icon{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: var(--green-color);
     border-radius: 50%;
     position: absolute;
-    right: -15px;
+    right: -9px;
     top: 32px;
     z-index: 10;
 }
 
 .right-container .process-icon{
-    left: -15px;
+    left: -10px;
 }
 
 .start-animation::after{
     content: '';
     position: absolute;
-    width: 6px;
+    width: 4px;
     height: 100%;
     background-color: var(--green-color);
     top: 0;
     left: 50%;
     margin-left: -3px;
+    border-radius: 4px;
     animation: move-line 6s linear forwards;
 }
 
@@ -294,7 +306,7 @@
     top: 27px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid white;
+    border-left: 10px solid var(--bg-color);
     right: -10px;
 }
 
@@ -306,18 +318,18 @@
     top: 27px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-right: 10px solid white;
+    border-right: 10px solid var(--bg-color);
     left: -10px;
 }
 
 
-.process-container:hover .right-container-arrow{
+/* .process-container:hover .right-container-arrow{
     border-right: 10px solid var(--green-color);
 }
 
 .process-container:hover .left-container-arrow{
     border-left: 10px solid var(--green-color);
-}
+} */
 
 .process-container:nth-child(2){
     animation-delay: 1s;
@@ -364,19 +376,19 @@
 
     .left-container .process-icon,
     .right-container .process-icon{
-        left: 5px;
+        left: 9px;
     }
 
     .right-container-arrow,
     .left-container-arrow{
-        border-right: 10px solid white;
+        border-right: 10px solid var(--bg-color);
         border-left: 0;
         left: -10px;
     }
 
-    .process-container:hover .left-container-arrow{
+    /* .process-container:hover .left-container-arrow{
         border-right: 10px solid var(--green-color);
         border-left: 0;
-    }
+    } */
 
 }
